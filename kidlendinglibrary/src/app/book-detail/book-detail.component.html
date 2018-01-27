@@ -1,0 +1,9 @@
+<div *ngIf="book">
+	<h2>{{ book.name }} פרטים</h2>
+	<div><span>מזהה: </span>{{book.uuid}}</div>
+	<div><span>כותרת: </span>{{book.title}}</div>
+	<div><span>מחבר/ת: </span>{{book.author}}</div>
+	<div><span>מחבר/ת: </span>
+		<input [(ngModel)]="book.title" placeholder="title"></div>
+</div> <!-- if book -->
+

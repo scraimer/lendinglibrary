@@ -1,4 +1,11 @@
-<h2>{{ book.name }} פרטים</h2>
-<div><span>מזהה: </span>{{book.uuid}}</div>
-<div><span>כותרת: </span>{{book.title}}</div>
-<div><span>מחבר/ת: </span>{{book.author}}</div>
+<h2>ספרים</h2>
+<ul class="books">
+  <li *ngFor="let book of books; index as i" 
+	  [class.selected]="book=== selectedBook" 
+	  (click)="onSelect(book)">
+    <span class="badge">{{i+1}}</span> {{book.title}}
+  </li>
+</ul>
+
+<app-book-detail [book]="selectedBook"></app-book-detail>
+
