@@ -12,7 +12,7 @@ export class BookService {
 
   getBooks(): Observable<Book[]> {
     // TODO: send the message _after_ fetching the heroes
-    this.messageService.add('HeroService: fetched heroes');
+    this.messageService.add('BookService: fetched heroes');
 
     return of (BOOKS);
 	}

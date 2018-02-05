@@ -9,6 +9,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookService } from './book.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MessageService } from './message.service';
   ],
   imports: [
      BrowserModule,
-	  FormsModule
+	  FormsModule,
+	  AppRoutingModule
   ],
   providers: [ BookService, MessageService ],
   bootstrap: [AppComponent]
