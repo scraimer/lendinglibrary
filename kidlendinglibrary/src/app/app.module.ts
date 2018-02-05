@@ -7,19 +7,22 @@ import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookService } from './book.service';
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BooksComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    MessagesComponent
   ],
   imports: [
      BrowserModule,
 	  FormsModule
   ],
-  providers: [ BookService ],
+  providers: [ BookService, MessageService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
