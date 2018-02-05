@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookService } from './book.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
      BrowserModule,
 	  FormsModule
   ],
-  providers: [],
+  providers: [ BookService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
