@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
-import { BOOKS } from '../mock-books'
 import { BookService } from '../book.service'
 
 @Component({
@@ -18,7 +17,8 @@ export class BooksComponent implements OnInit {
 	}
 
 	getBooks(): void {
-		this.books = this.bookService.getBooks();
+		this.bookService.getBooks()
+		.subscribe( books => this.books = books );
 	}
 	
   constructor(private bookService: BookService) {}
