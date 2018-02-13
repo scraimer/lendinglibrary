@@ -1,11 +1,9 @@
 <h2>ספרים</h2>
 <ul class="books">
-  <li *ngFor="let book of books; index as i" 
-	  [class.selected]="book=== selectedBook" 
-	  (click)="onSelect(book)">
-    <span class="badge">{{i+1}}</span> {{book.title}}
+  	<li *ngFor="let book of books; index as i">
+	  <a routerLink="/detail/{{book.uuid}}">
+		  <span class="badge" title="{{book.uuid}}">{{i}}</span> {{book.title}}
+	  </a>
   </li>
 </ul>
-
-<app-book-detail [book]="selectedBook"></app-book-detail>
 

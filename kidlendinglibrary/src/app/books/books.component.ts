@@ -10,12 +10,7 @@ import { BookService } from '../book.service'
 export class BooksComponent implements OnInit {
 
   books: Book[];
-  selectedBook: Book;
   	
-	onSelect(book: Book) : void {
-		this.selectedBook = book;
-	}
-
 	getBooks(): void {
 		this.bookService.getBooks()
 		.subscribe( books => this.books = books );
